@@ -8,3 +8,9 @@ async function sendMessage() {
     const data = await response.json();
     showRoutes(data.routes);
 }
+
+function toggleChat() {
+    console.log(document.getElementById("chat-container").classList);
+    document.getElementById("chat-container").classList.toggle("hidden");
+    document.getElementById("chat-container").classList.toggle("visible");
+}

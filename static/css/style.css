@@ -6,6 +6,7 @@ body {
 #map {
   height: 100vh;
   width: 100%;
+  z-index: 1;
 }
 
 /* Nút bật chat */
@@ -22,6 +23,7 @@ body {
   font-size: 22px;
   cursor: pointer;
   box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  z-index: 10001;
 }
 
 /* Khung chat */
@@ -34,13 +36,18 @@ body {
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  display: flex;
   flex-direction: column;
   overflow: hidden;
+  z-index: 10000;
 }
 
 .hidden {
   display: none;
+}
+
+/* Ensure hiding the chat-container overrides the ID selector */
+.visible {
+  display: flex;
 }
 
 #chat-box {
